@@ -1,19 +1,23 @@
-const tintColorLight = '#2f95dc';
-const tintColorDark = '#fff';
+// JUMPICK Color System
+// Re-export from Theme for backwards compatibility
 
-export default {
+import { Theme } from './Theme';
+
+export const Colors = {
   light: {
-    text: '#000',
-    background: '#fff',
-    tint: tintColorLight,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorLight,
+    text: Theme.colors.textMain,
+    background: Theme.colors.background,
+    tint: Theme.colors.primary,
+    tabIconDefault: Theme.colors.textSub,
+    tabIconSelected: Theme.colors.primary,
   },
   dark: {
-    text: '#fff',
-    background: '#000',
-    tint: tintColorDark,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorDark,
+    text: Theme.colors.textMain,
+    background: Theme.colors.background,
+    tint: Theme.colors.primary,
+    tabIconDefault: Theme.colors.textSub,
+    tabIconSelected: Theme.colors.primary,
   },
 };
+
+export default Colors;
